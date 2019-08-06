@@ -1,0 +1,6 @@
+mutation addUser($input: UserInput!) {
+  addUser(input: $input) @rest(type: "User", path: "users", method: "POST") {
+    id
+    name
+  }
+}

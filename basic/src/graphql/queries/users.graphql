@@ -1,0 +1,10 @@
+query users {
+  userResult @rest(type: "UserResult", path: "users") {
+    total
+    data @type(name: "User") {
+      id
+      first_name
+      last_name
+    }
+  }
+}

@@ -1,0 +1,9 @@
+query people {
+  people @rest(type: "PeoplePayload", path: "people/") {
+    count
+    next
+    results @type(name: "People") {
+      name
+    }
+  }
+}

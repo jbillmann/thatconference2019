@@ -1,0 +1,9 @@
+query($searchInput: String!) {
+  search(searchInput: $searchInput)
+    @rest(type: "MarsPhotoPayload", path: "photos/?{args.searchInput}") {
+    photos @type(name: "Photo") {
+      id
+      img_src
+    }
+  }
+}
